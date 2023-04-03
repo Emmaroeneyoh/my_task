@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Slide Navbar</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="slide navbar style.css">
+<link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+	<div class="main">  	
+		<input type="checkbox" id="chk" aria-hidden="true">
+
+			<div class="signup">
+				<form id="signupform">
+					<label for="chk" aria-hidden="true">Sign up</label>
+					<input type="text" name="username" placeholder="User name" >
+                    
+					<input type="email" name="email" placeholder="Email"  >
+					<input type="password" name="password" placeholder="Password"  >
+					<button class="signupbutton">Sign up</button>
+				</form>
+			</div>
+
+			<div class="login">
+				<form id="loginform">
+					<label for="chk" aria-hidden="true">Login</label>
+					<input type="email" name="email" placeholder="Email" >
+					<input type="password" name="password" placeholder="Password" >
+					<button class="loginbutton">Login</button>
+				</form>
+			</div>
+	</div>
+</body>
+<script src="/assets/user/signup.js"></script>
+<script src="/assets/user/login.js"></script>
+</html>
