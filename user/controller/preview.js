@@ -1,5 +1,6 @@
 const { chatModel } = require("../core/db/chat")
 const { userModel } = require("../core/db/user")
+const { format_date } = require("../../helper/helper")
 
 const UserHomepage = async (req, res) => {
   try {
@@ -19,10 +20,10 @@ const UserHomepage = async (req, res) => {
          })
         console.log('this is chat', chat)
          friend = await userModel.findById(friendId)
-        return  res.render("client/home" ,{user:blog , users , chat , friend , myid})
+        return  res.render("client/home" ,{user:blog , users , chat , friend , myid , format_date})
       }
     
-     res.render("client/home" ,{user:blog , users , friend:false , chat:false })
+     res.render("client/home" ,{user:blog , users , friend:false , chat:false , format_date})
     } catch (error) {
       console.log(error)
     }

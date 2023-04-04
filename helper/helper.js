@@ -1,4 +1,5 @@
 const { userModel } = require("../user/core/db/user");
+const moment = require('moment')
 const jwt = require('jsonwebtoken')
 
 const base_url = process.env.DATABASE_URL;
@@ -8,7 +9,7 @@ const Admin_AUTH_JWT = process.env.Admin;
 
 
 const format_date = function(date, format) {
-    return moment(date). format(format)
+    return moment(date).format('LT')
 }
 
 const user_auth = (req, res, next) => {

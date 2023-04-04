@@ -12,10 +12,10 @@ router.post('/signup', createadmin)
 router.post('/login', loginadmin)
 
 //dashboard
-router.get('/users', alluserpage)
-router.get('/delete/user/:id', delete_user)
-router.get('/suspend/user/:id', suspend_user)
-router.get('/unsuspend/user/:id', unsuspend_user)
+router.get('/users', admin_auth ,   alluserpage)
+router.get('/delete/user/:id',admin_auth , delete_user)
+router.get('/suspend/user/:id',admin_auth , suspend_user)
+router.get('/unsuspend/user/:id', admin_auth ,unsuspend_user)
 
 
 

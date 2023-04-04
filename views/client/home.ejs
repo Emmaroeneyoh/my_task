@@ -410,7 +410,7 @@
                                                                         </p>
                                                                         <div class="d-flex align-items-center justify-content-end text-sm opacity-6">
                                                                             <i class="fa fa-check-double mr-1 text-xs" aria-hidden="true"></i>
-                                                                            <small>4:42pm</small>
+                                                                            <small><%= format_date(x.createdAt,' MM / DD / YYYY') %></small>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -427,7 +427,7 @@
                                                                         </p>
                                                                         <div class="d-flex align-items-center text-sm opacity-6">
                                                                             <i class="far fa-clock mr-1" aria-hidden="true"></i>
-                                                                            <small>3:14am</small>
+                                                                            <small><%= format_date(x.createdAt) %></small>
                                                                         </div>
                                                                     </div>
                                                                 </div>

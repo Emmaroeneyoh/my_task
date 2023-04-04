@@ -14,7 +14,7 @@ router.get('/suspended', suspended_page)
 
 
 //update user 
-router.get('/update',update_page)
-router.post('/update', upload.single("profile_img")  , editprofile)
-router.get('/single/:id', UserHomepage)
+router.get('/update', user_auth  ,update_page)
+router.post('/update',  user_auth  ,upload.single("profile_img")  , editprofile)
+router.get('/single/:id', user_auth  , UserHomepage)
 module.exports = router
