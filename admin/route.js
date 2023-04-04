@@ -6,7 +6,7 @@ const { delete_user, suspend_user, unsuspend_user } = require('./controller/user
 
 const router = require('express').Router()
  
-router.get('/', AdminHomepage)
+router.get('/', admin_auth ,  AdminHomepage)
 router.get('/signup', admin_signup_page)
 router.post('/signup', createadmin)
 router.post('/login', loginadmin)
